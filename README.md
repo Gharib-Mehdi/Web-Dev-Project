@@ -1,34 +1,31 @@
 # Web-Dev-Project
 That's my first web development project
-# Nom du Projet (ex: MyManager - Gestion Hospitalière)
+# MyManager - Administration Scolaire
 
-<!-- Mettez un court slogan ou une description en une phrase ici -->
-> Application Backoffice de gestion réalisée dans le cadre du module Dévelopement web.
+> MyManager : Tout votre établissement dans une interface.
 
 ## 🔗 Liens Importants
 
-<!-- REMPLACEZ LES LIENS CI-DESSOUS -->
-- **APPLICATION DÉPLOYÉE (Live Demo) :** [CLIQUEZ ICI POUR VOIR LE SITE](https://)
-- **Repository GitHub :** [Lien vers ce repo](https://)
+- **APPLICATION DÉPLOYÉE (Live Demo) :** [CLIQUEZ ICI POUR VOIR LE SITE](login.html)
+- **Repository GitHub :** [Lien vers ce repo](https://github.com/Gharib-Mehdi/Web-Dev-Project)
 
 ---
 
 ## 👥 Membres de l'Équipe
 
-**Nom du Groupe :** [Insérer le nom du groupe ici]
+**Nom du Groupe :** []
 
-| Prénom & Nom | Rôle / Tâches principales | Lien Github |
-|--------------|---------------------------|-------------|
-| Étudiant 1   | (ex: Dashboard, ChartJS)  | [@pseudo](https://github.com/pseudo) |
-| Étudiant 2   | (ex: CRUD Utilisateurs)   | [@pseudo](https://github.com/pseudo) |
-| Étudiant 3   | (ex: CSS, Responsive)     | [@pseudo](https://github.com/pseudo) |
+|   Prénom & Nom    | Rôle / Tâches principales |                Lien Github                 |
+|-------------------|---------------------------|--------------------------------------------|
+| Mehdi Gharib      | Dashboard , Charts , CRUD | [@pseudo](https://github.com/Gharib-Mehdi) |
+| Aymen Aitomar     | Page Login ( JS )         | [@pseudo](https://github.com/defstd)       |
+| Mohsine Boukhaima | Page Login ( HTML , CSS ) | [@pseudo](https://github.com/Mohsine-49)   |
 
 ---
 
 ## 📝 Thème Choisi
-<!-- Indiquez le thème choisi parmi la liste ou votre sujet personnalisé -->
-*   **Thème :** (ex: Gestion de Bibliothèque / Gestion Immobilière / Custom...)
-*   **Description :** Une brève explication du but de l'application.
+*   **Thème :** Administration Scolaire
+*   **Description :** MyManager est comme toute application CRUD simple , un outil qui vous permet de créer , modifier , afficher et supprimer vos entités (Etudiants , Professeurs , Salles ...) d'une façon fiable et intelligente , et aussi une application qui vous permet de gérer votre base de données d'une façon simplifié et efficace .
 
 ---
 
@@ -36,11 +33,11 @@ That's my first web development project
 <!-- Cochez les cases [x] pour les fonctionnalités terminées. Laissez [ ] pour ce qui n'est pas fait. -->
 
 ### Fonctionnalités Principales
-- [ ] **CRUD 1 :** [Nom Entité, ex: Utilisateurs] (Create, Read, Update, Delete)
-- [ ] **CRUD 2 :** [Nom Entité]
-- [ ] **CRUD 3 :** [Nom Entité]
-- [ ] **CRUD 4 :** [Nom Entité]
-- [ ] **CRUD 5 :** [Nom Entité]
+- [ ] **CRUD 1 :** [Étudiants] (Create, Read, Update, Delete)
+- [ ] **CRUD 2 :** [Professeurs]
+- [ ] **CRUD 3 :** [Cours]
+- [ ] **CRUD 4 :** [Salles]
+- [ ] **CRUD 5 :** [Notes]
 - [ ] **Recherche & Filtres** dans les tableaux
 - [ ] **Pagination**
 
