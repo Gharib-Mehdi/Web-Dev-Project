@@ -33,20 +33,20 @@ That's my first web development project
 <!-- Cochez les cases [x] pour les fonctionnalités terminées. Laissez [ ] pour ce qui n'est pas fait. -->
 
 ### Fonctionnalités Principales
-- [ ] **CRUD 1 :** [Étudiants] (Create, Read, Update, Delete)
-- [ ] **CRUD 2 :** [Professeurs]
-- [ ] **CRUD 3 :** [Cours]
-- [ ] **CRUD 4 :** [Salles]
-- [ ] **CRUD 5 :** [Notes]
-- [ ] **Recherche & Filtres** dans les tableaux
+- [x] **CRUD 1 :** [Étudiants] (Create, Read, Update, Delete)
+- [x] **CRUD 2 :** [Professeurs]
+- [x] **CRUD 3 :** [Cours]
+- [x] **CRUD 4 :** [Salles]
+- [x] **CRUD 5 :** [Notes]
+- [x] **Recherche & Filtres** dans les tableaux
 - [ ] **Pagination**
 
 ### Dashboard & Data
-- [ ] **KPIs :** Cartes avec chiffres clés (Total utilisateurs, revenus, etc.)
-- [ ] **Chart 1 :** [Type, ex: Pie Chart]
-- [ ] **Chart 2 :** [Type, ex: Bar Chart]
-- [ ] **Chart 3 :** [Type]
-- [ ] **Chart 4 :** [Type]
+- [x] **KPIs :** Cartes avec chiffres clés (Total utilisateurs, revenus, etc.)
+- [x] **Chart 1 :** [Pie Chart]
+- [x] **Chart 2 :** [Bar Chart]
+- [x] **Chart 3 :** [Doughnut Chart]
+- [x] **Chart 4 :** [Line Chart]
 - [ ] **Chart 5 :** [Type]
 
 ### Technique & Bonus
