@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Manager | Dashboard</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    
+    <!-- LOGO -->
+    <div class="sidebar-top">
+      <img src="assets/logo.png" alt="MyManager">
+      <h1>My Manager</h1>
+    </div>
+
+    <!-- ENTITIES -->
+    <nav class="sidebar-menu">
+      <div class="menu-item" data-page="dashboard">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Dashboard</span>
+      </div>
+
+      <div class="menu-item" data-page="profs">
+        <i class="fa-solid fa-user-tie"></i>
+        <span>Professeurs</span>
+      </div>
+
+      <div class="menu-item" data-page="etudiants">
+        <i class="fa-solid fa-user-graduate"></i>
+        <span>Étudiants</span>
+      </div>
+
+      <div class="menu-item" data-page="salles">
+        <i class="fa-solid fa-door-open"></i>
+        <span>Salles</span>
+      </div>
+
+      <div class="menu-item" data-page="cours">
+        <i class="fa-solid fa-book"></i>
+        <span>Cours</span>
+      </div>
+
+      <div class="menu-item" data-page="notes">
+        <i class="fa-solid fa-clipboard"></i>
+        <span>Notes</span>
+      </div>
+    </nav>
+
+    <!-- LOGOUT -->
+    <div class="sidebar-bottom">
+      <a href="login.html" class="logout">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Logout</span>
+      </a>
+    </div>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- TOP SECTION : CHARTS / DASHBOARD -->
+    <section class="dashboard-top">
+      
+      <h2>Dashboard</h2>
+      <div class="cards">
+        <div class="card">Professeurs<br><strong id="statProfs">0</strong></div>
+        <div class="card">Étudiants<br><strong id="statEtudiants">0</strong></div>
+        <div class="card">Cours<br><strong id="statCours">0</strong></div>
+        <div class="card">Salles<br><strong id="statSalles">0</strong></div>
+        <div class="card">Notes<br><strong id="statNotes">0</strong></div>
+      </div>
+
+    </section>
+
+    <!-- BOTTOM SECTION : CRUD -->
+    <section class="crud-section" id="content">
+      <p>Select an entity from the sidebar to manage data.</p>
+    </section>
+
+  </main>
+
+</div>
+
+<script>
+
+function getNextId(array) {
+  return array.length ? Math.max(...array.map(e => e.id)) + 1 : 1;
+}
+function getUnique(array, key) {
+  return [...new Set(array.map(item => item[key]))];
+}
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/stats.js"></script>
+<script src="js/profs.js"></script>
+<script src="js/etudiants.js"></script>
+<script src="js/salles.js"></script>
+<script src="js/cours.js"></script>
+<script src="js/notes.js"></script>
+<script src="js/stats.js"></script>
+<script src="js/dashboard.js"></script>
+
+<script> loadStats(); </script>
+
+</body>
+</html>

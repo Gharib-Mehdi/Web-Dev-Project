@@ -1,0 +1,4 @@
+[
+    { "id": 1, "name": "Ali", "email": "ali@gmail.com", "level": "L2" },
+    { "id": 2, "name": "Sara", "email": "sara@gmail.com", "level": "L3" }
+]

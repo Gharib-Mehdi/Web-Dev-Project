@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    background-color: rgba(43, 48, 53, 1);
+}
+/*
+.form{
+    display: flex;
+    height: 400px;
+    flex-direction: column;
+    background-color:beige;
+    justify-content: center;
+    padding: 50px;
+    align-items: start;
+    width: 400px;
+    border-radius: 75px;
+}
+*/
+.form-group{
+    width: 400px;
+    border-radius: 75px;
+    padding: 50px;
+    color: #212529;
+    background-color:#f1f3f5;
+}
+h1{
+    align-self: center;
+}
+input{
+    width: 300px;
+}
+button{
+    align-self: center;
+}
+#error{
+    align-self: center;
+    color: red;
+}
