@@ -129,3 +129,7 @@ body {
     height: 150px;
     width: 200px;
 }
+
+canvas {
+  max-height: 320px;
+}

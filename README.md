@@ -6,7 +6,7 @@ That's my first web development project
 
 ## 🔗 Liens Importants
 
-- **APPLICATION DÉPLOYÉE (Live Demo) :** [CLIQUEZ ICI POUR VOIR LE SITE](login.html)
+- **APPLICATION DÉPLOYÉE (Live Demo) :** [CLIQUEZ ICI POUR VOIR LE SITE]( https://gharib-mehdi.github.io/Web-Dev-Project/)
 - **Repository GitHub :** [Lien vers ce repo](https://github.com/Gharib-Mehdi/Web-Dev-Project)
 
 ---
@@ -39,7 +39,7 @@ That's my first web development project
 - [x] **CRUD 4 :** [Salles]
 - [x] **CRUD 5 :** [Notes]
 - [x] **Recherche & Filtres** dans les tableaux
-- [ ] **Pagination**
+- [x] **Pagination**
 
 ### Dashboard & Data
 - [x] **KPIs :** Cartes avec chiffres clés (Total utilisateurs, revenus, etc.)

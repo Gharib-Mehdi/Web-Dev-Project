@@ -1,9 +1,21 @@
+function getMoyenneNotes() {
+  if (notes.length === 0) return 0;
+
+  let total = 0;
+  notes.forEach(n => {
+    total += Number(n.note);
+  });
+
+  return (total / notes.length).toFixed(2);
+}
+
+
 function loadStats() {
   document.getElementById("statProfs").textContent = profs.length;
   document.getElementById("statEtudiants").textContent = etudiants.length;
   document.getElementById("statCours").textContent = cours.length;
   document.getElementById("statSalles").textContent = salles.length;
-  document.getElementById("statNotes").textContent = notes.length;
+  document.getElementById("statNotes").textContent = getMoyenneNotes();
 }
 
 function loadDashboard() {
@@ -16,11 +28,12 @@ function loadDashboard() {
 
   <canvas id="chartNotes"></canvas>
 
-  <canvas id="chartCours" style="margin-top:40px;"></canvas>
+  <div class="charts-row">
+    <canvas id="chartCours"></canvas>
+    <canvas id="chartCoursProfs"></canvas>
+  </div>
 
-  <canvas id="chartCoursProfs" style="margin-top:40px;"></canvas>
-
-  <canvas id="chartNotesLine" style="margin-top:40px;"></canvas>
+  <canvas id="chartNotesLine"></canvas>
 `;
 
   createNotesChart();
@@ -47,10 +60,17 @@ function createNotesChart() {
     data: {
       labels: ["0-5", "6-10", "11-15", "16-20"],
       datasets: [{
-        label: "Répartition des notes",
         data: ranges,
         backgroundColor: "#2563eb"
       }]
+    },
+    options: {
+      plugins: {
+        title: {
+          display: true,
+          text: "Répartition des notes par intervalle"
+        }
+      }
     }
   });
 }
@@ -58,12 +78,13 @@ function createNotesChart() {
 function createCoursChart() {
   const ctx = document.getElementById("chartCours");
 
+  const uniqueCours = getUniqueCoursByIntitule();
   let labels = [];
   let data = [];
 
-  cours.forEach(c => {
+  uniqueCours.forEach(c => {
     labels.push(c.intitule);
-    data.push(notes.filter(n => n.coursId == c.id).length);
+    data.push(cours.filter(x => x.intitule === c.intitule).length);
   });
 
   new Chart(ctx, {
@@ -73,6 +94,14 @@ function createCoursChart() {
       datasets: [{
         data: data
       }]
+    },
+    options: {
+      plugins: {
+        title: {
+          display: true,
+          text: "Répartition des cours par matière"
+        }
+      }
     }
   });
 }
@@ -80,10 +109,11 @@ function createCoursChart() {
 function createCoursProfsChart() {
   const ctx = document.getElementById("chartCoursProfs");
 
+  const uniqueProfs = getUniqueProfsByNom();
   let labels = [];
   let data = [];
 
-  profs.forEach(p => {
+  uniqueProfs.forEach(p => {
     labels.push(p.nom);
     data.push(cours.filter(c => c.profId == p.id).length);
   });
@@ -93,17 +123,25 @@ function createCoursProfsChart() {
     data: {
       labels: labels,
       datasets: [{
-        label: "Cours par professeur",
         data: data
       }]
+    },
+    options: {
+      plugins: {
+        title: {
+          display: true,
+          text: "Charge pédagogique par professeur"
+        }
+      }
     }
   });
 }
 
+
 function createNotesLineChart() {
   const ctx = document.getElementById("chartNotesLine");
 
-  let labels = notes.map((n, index) => index + 1);
+  let labels = notes.map((_, index) => index + 1);
   let data = notes.map(n => n.note);
 
   new Chart(ctx, {
@@ -111,13 +149,43 @@ function createNotesLineChart() {
     data: {
       labels: labels,
       datasets: [{
-        label: "Évolution des notes",
         data: data,
         tension: 0.3,
-        fill: false,
         borderWidth: 2
       }]
+    },
+    options: {
+      plugins: {
+        title: {
+          display: true,
+          text: "Évolution chronologique des notes"
+        }
+      }
     }
   });
 }
 
+
+function getUniqueCoursByIntitule() {
+  let unique = [];
+
+  cours.forEach(c => {
+    if (!unique.some(u => u.intitule === c.intitule)) {
+      unique.push(c);
+    }
+  });
+
+  return unique;
+}
+
+function getUniqueProfsByNom() {
+  let unique = [];
+
+  profs.forEach(p => {
+    if (!unique.some(u => u.nom === p.nom)) {
+      unique.push(p);
+    }
+  });
+
+  return unique;
+}
